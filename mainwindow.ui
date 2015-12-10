@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="mainTab">
      <attribute name="title">
@@ -61,8 +61,83 @@
     </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
-      <string>eteht</string>
+      <string>Remove Info</string>
      </attribute>
+     <widget class="QLabel" name="removeLabel">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>10</y>
+        <width>291</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Remove Information</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="removeLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>40</y>
+        <width>321</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Insert name here</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="personRadioButton">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>80</y>
+        <width>77</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Persons</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="computerRadioButton">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>80</y>
+        <width>97</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Computers</string>
+      </property>
+     </widget>
+     <widget class="QListView" name="personListView">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>541</width>
+        <height>191</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="removePushButton">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>310</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Remove</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -72,7 +147,7 @@
      <x>0</x>
      <y>0</y>
      <width>621</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
