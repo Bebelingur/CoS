@@ -1,5 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#include "services.h"
 
 #include <QMainWindow>
 
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Services sConnect;
 };
 
 #endif // MAINWINDOW_H
