@@ -4,15 +4,10 @@
 #
 #-------------------------------------------------
 
-<<<<<<< HEAD
+
 QT       += core gui sql
-=======
 
-QT       += core gui
-QT       += core sql
-QT       += sql
 
->>>>>>> 5f405db5284bbf2b5209abd8bc317514da4309cc
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

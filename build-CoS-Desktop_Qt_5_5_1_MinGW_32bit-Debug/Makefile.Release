@@ -120,10 +120,16 @@ compiler_rcc_clean:
 compiler_moc_header_make_all: release/moc_mainwindow.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) release\moc_mainwindow.cpp
-release/moc_mainwindow.cpp: ../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QMainWindow \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qwidget.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+release/moc_mainwindow.cpp: ../services.h \
+		../data.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/QtSql \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/QtSqlDepends \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QtCore \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QtCoreDepends \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobject.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qnamespace.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qglobal.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qconfig.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfeatures.h \
@@ -152,11 +158,7 @@ release/moc_mainwindow.cpp: ../../../../../Downloads/Forrit/5.5/mingw492_32/incl
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmutex.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qnumeric.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qnamespace.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobject.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstring.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qchar.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbytearray.h \
@@ -177,32 +179,168 @@ release/moc_mainwindow.cpp: ../../../../../Downloads/Forrit/5.5/mingw492_32/incl
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qisenum.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobject_impl.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qanimationgroup.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qparallelanimationgroup.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpauseanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpropertyanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvariantanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qeasingcurve.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvector.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpoint.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvariant.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmap.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpair.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdebug.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qhash.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextstream.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qiodevice.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlocale.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qshareddata.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qset.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsequentialanimationgroup.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextcodec.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qendian.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlibraryinfo.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdatetime.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbuffer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdatastream.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdir.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfileinfo.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfiledevice.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdiriterator.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfileselector.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QObject \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QStringList \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfilesystemwatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlockfile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qloggingcategory.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qprocess.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qresource.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsavefile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsettings.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstandardpaths.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstorageinfo.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtemporarydir.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QScopedPointer \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtemporaryfile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurl.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurlquery.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractproxymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qidentityproxymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsortfilterproxymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstringlistmodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsonarray.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsonvalue.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsondocument.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsonobject.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstracteventdispatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qeventloop.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractnativeeventfilter.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbasictimer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmath.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmetaobject.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmimedata.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectcleanuphandler.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpointer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedmemory.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsignalmapper.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsocketnotifier.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsystemsemaphore.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtimer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtranslator.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qwineventnotifier.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmimedatabase.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmimetype.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfactoryinterface.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlibrary.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qplugin.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpluginloader.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/quuid.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractstate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstracttransition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qeventtransition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfinalstate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qhistorystate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsignaltransition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstatemachine.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qexception.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfuture.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfutureinterface.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qrunnable.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qresultstore.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfuturesynchronizer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfuturewatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qreadwritelock.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsemaphore.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qthread.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qthreadpool.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qthreadstorage.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qwaitcondition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qarraydataops.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qarraydatapointer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbitarray.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbytearraymatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcache.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcollator.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcommandlineoption.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcommandlineparser.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcryptographichash.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qelapsedtimer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qline.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlinkedlist.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmargins.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmessageauthenticationcode.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qqueue.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qrect.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsize.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpoint.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qregularexpression.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qscopedvaluerollback.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstack.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextboundaryfinder.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtimeline.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtimezone.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qxmlstream.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtcoreversion.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsql.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqldriver.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqldriverplugin.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlerror.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlfield.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlindex.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlrecord.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlresult.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlquerymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlrelationaldelegate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qitemdelegate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qwidget.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpalette.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qcolor.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qrgb.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qbrush.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpair.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvector.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qmatrix.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpolygon.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qregion.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdatastream.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qiodevice.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qline.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qtransform.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpainterpath.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qimage.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpixelformat.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpixmap.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qshareddata.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qhash.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qfont.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qfontmetrics.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qfontinfo.h \
@@ -210,21 +348,31 @@ release/moc_mainwindow.cpp: ../../../../../Downloads/Forrit/5.5/mingw492_32/incl
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qcursor.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qkeysequence.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qevent.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvariant.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmap.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdebug.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextstream.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlocale.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qset.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurl.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurlquery.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfile.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qvalidator.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qicon.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qslider.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qstyle.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qframe.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qlistview.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qcombobox.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlrelationaltablemodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqltablemodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qtsqlversion.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QtDebug \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QCoreApplication \
+		../infotype.h \
+		../comptype.h \
+		../relationstype.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QMainWindow \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
 		../mainwindow.h
 	E:\Downloads\Forrit\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IE:/Downloads/Forrit/5.5/mingw492_32/mkspecs/win32-g++ -I"E:/Hjálmar HR/Verklegt námskeið/CoS" -IE:/Downloads/Forrit/5.5/mingw492_32/include -IE:/Downloads/Forrit/5.5/mingw492_32/include/QtWidgets -IE:/Downloads/Forrit/5.5/mingw492_32/include/QtGui -IE:/Downloads/Forrit/5.5/mingw492_32/include/QtANGLE -IE:/Downloads/Forrit/5.5/mingw492_32/include/QtSql -IE:/Downloads/Forrit/5.5/mingw492_32/include/QtCore -I. ..\mainwindow.h -o release\moc_mainwindow.cpp
 
@@ -249,10 +397,16 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 ####### Compile
 
 release/main.o: ../main.cpp ../mainwindow.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QMainWindow \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qwidget.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		../services.h \
+		../data.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/QtSql \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/QtSqlDepends \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QtCore \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QtCoreDepends \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobject.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qnamespace.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qglobal.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qconfig.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfeatures.h \
@@ -281,11 +435,7 @@ release/main.o: ../main.cpp ../mainwindow.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmutex.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qnumeric.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qnamespace.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobject.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstring.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qchar.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbytearray.h \
@@ -306,32 +456,168 @@ release/main.o: ../main.cpp ../mainwindow.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qisenum.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobject_impl.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qanimationgroup.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qparallelanimationgroup.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpauseanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpropertyanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvariantanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qeasingcurve.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvector.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpoint.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvariant.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmap.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpair.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdebug.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qhash.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextstream.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qiodevice.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlocale.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qshareddata.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qset.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsequentialanimationgroup.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextcodec.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qendian.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlibraryinfo.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdatetime.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbuffer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdatastream.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdir.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfileinfo.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfiledevice.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdiriterator.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfileselector.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QObject \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QStringList \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfilesystemwatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlockfile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qloggingcategory.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qprocess.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qresource.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsavefile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsettings.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstandardpaths.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstorageinfo.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtemporarydir.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QScopedPointer \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtemporaryfile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurl.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurlquery.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractproxymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qidentityproxymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsortfilterproxymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstringlistmodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsonarray.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsonvalue.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsondocument.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsonobject.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstracteventdispatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qeventloop.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractnativeeventfilter.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbasictimer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmath.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmetaobject.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmimedata.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectcleanuphandler.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpointer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedmemory.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsignalmapper.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsocketnotifier.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsystemsemaphore.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtimer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtranslator.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qwineventnotifier.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmimedatabase.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmimetype.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfactoryinterface.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlibrary.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qplugin.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpluginloader.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/quuid.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractstate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstracttransition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qeventtransition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfinalstate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qhistorystate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsignaltransition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstatemachine.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qexception.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfuture.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfutureinterface.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qrunnable.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qresultstore.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfuturesynchronizer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfuturewatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qreadwritelock.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsemaphore.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qthread.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qthreadpool.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qthreadstorage.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qwaitcondition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qarraydataops.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qarraydatapointer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbitarray.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbytearraymatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcache.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcollator.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcommandlineoption.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcommandlineparser.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcryptographichash.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qelapsedtimer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qline.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlinkedlist.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmargins.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmessageauthenticationcode.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qqueue.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qrect.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsize.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpoint.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qregularexpression.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qscopedvaluerollback.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstack.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextboundaryfinder.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtimeline.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtimezone.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qxmlstream.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtcoreversion.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsql.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqldriver.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqldriverplugin.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlerror.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlfield.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlindex.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlrecord.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlresult.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlquerymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlrelationaldelegate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qitemdelegate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qwidget.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpalette.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qcolor.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qrgb.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qbrush.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpair.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvector.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qmatrix.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpolygon.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qregion.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdatastream.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qiodevice.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qline.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qtransform.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpainterpath.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qimage.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpixelformat.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpixmap.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qshareddata.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qhash.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qfont.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qfontmetrics.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qfontinfo.h \
@@ -339,35 +625,49 @@ release/main.o: ../main.cpp ../mainwindow.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qcursor.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qkeysequence.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qevent.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvariant.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmap.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdebug.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextstream.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlocale.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qset.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurl.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurlquery.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfile.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qvalidator.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qicon.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qslider.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qstyle.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qframe.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qlistview.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qcombobox.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlrelationaltablemodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqltablemodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qtsqlversion.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QtDebug \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QCoreApplication \
+		../infotype.h \
+		../comptype.h \
+		../relationstype.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QMainWindow \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QApplication \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qapplication.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qeventloop.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qguiapplication.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qinputmethod.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\main.cpp
 
 release/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QMainWindow \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qwidget.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		../services.h \
+		../data.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/QtSql \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/QtSqlDepends \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QtCore \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QtCoreDepends \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobject.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qnamespace.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qglobal.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qconfig.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfeatures.h \
@@ -396,11 +696,7 @@ release/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmutex.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qnumeric.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qnamespace.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobject.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstring.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qchar.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbytearray.h \
@@ -421,32 +717,168 @@ release/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qisenum.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobject_impl.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qanimationgroup.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qparallelanimationgroup.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpauseanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpropertyanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvariantanimation.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qeasingcurve.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvector.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpoint.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvariant.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmap.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpair.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdebug.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qhash.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextstream.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qiodevice.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlocale.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qshareddata.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qset.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsequentialanimationgroup.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextcodec.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qendian.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlibraryinfo.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdatetime.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbuffer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdatastream.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdir.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfileinfo.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfiledevice.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdiriterator.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfileselector.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QObject \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QStringList \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfilesystemwatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlockfile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qloggingcategory.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qprocess.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qresource.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsavefile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsettings.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstandardpaths.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstorageinfo.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtemporarydir.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QScopedPointer \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtemporaryfile.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurl.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurlquery.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractproxymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qidentityproxymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsortfilterproxymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstringlistmodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsonarray.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsonvalue.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsondocument.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qjsonobject.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstracteventdispatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qeventloop.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractnativeeventfilter.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbasictimer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmath.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmetaobject.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmimedata.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qobjectcleanuphandler.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpointer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedmemory.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsignalmapper.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsocketnotifier.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsystemsemaphore.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtimer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtranslator.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qwineventnotifier.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmimedatabase.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmimetype.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfactoryinterface.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlibrary.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qplugin.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpluginloader.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/quuid.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractstate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstracttransition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qeventtransition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfinalstate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qhistorystate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsignaltransition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstatemachine.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qexception.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfuture.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfutureinterface.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qrunnable.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qresultstore.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfuturesynchronizer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfuturewatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qreadwritelock.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsemaphore.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qthread.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qthreadpool.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qthreadstorage.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qwaitcondition.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qarraydataops.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qarraydatapointer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbitarray.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qbytearraymatcher.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcache.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcollator.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcommandlineoption.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcommandlineparser.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcryptographichash.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qelapsedtimer.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qline.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlinkedlist.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmargins.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmessageauthenticationcode.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qqueue.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qrect.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsize.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpoint.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qregularexpression.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qscopedvaluerollback.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qstack.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextboundaryfinder.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtimeline.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtimezone.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qxmlstream.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtcoreversion.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsql.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqldriver.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqldriverplugin.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlerror.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlfield.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlindex.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlrecord.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlresult.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlquerymodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlrelationaldelegate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qitemdelegate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qwidget.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpalette.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qcolor.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qrgb.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qbrush.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qpair.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvector.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qmatrix.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpolygon.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qregion.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdatastream.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qiodevice.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qline.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qtransform.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpainterpath.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qimage.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpixelformat.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qpixmap.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qshareddata.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qhash.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qfont.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qfontmetrics.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qfontinfo.h \
@@ -454,21 +886,31 @@ release/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qcursor.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qkeysequence.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qevent.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qvariant.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qmap.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qdebug.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qtextstream.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qlocale.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qset.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurl.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qurlquery.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfile.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qvalidator.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qicon.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qslider.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qstyle.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qframe.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qlistview.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qcombobox.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqlrelationaltablemodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qsqltablemodel.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtSql/qtsqlversion.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QtDebug \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QCoreApplication \
+		../infotype.h \
+		../comptype.h \
+		../relationstype.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QMainWindow \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
 		ui_mainwindow.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/QVariant \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QAction \
@@ -476,8 +918,6 @@ release/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QApplication \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qapplication.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qeventloop.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qguiapplication.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qinputmethod.h \
@@ -485,29 +925,14 @@ release/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QHeaderView \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qframe.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtGui/qvalidator.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtCore/qregularexpression.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qslider.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qstyle.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QLabel \
+		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qlabel.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QMenuBar \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qmenubar.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qmenu.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QStatusBar \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qstatusbar.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QTabWidget \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QToolBar \
-		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/qtoolbar.h \
 		../../../../../Downloads/Forrit/5.5/mingw492_32/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\mainwindow.cpp
 
