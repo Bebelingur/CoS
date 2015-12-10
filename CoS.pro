@@ -4,7 +4,14 @@
 #
 #-------------------------------------------------
 
+<<<<<<< HEAD
 QT       += core gui sql
+=======
+
+QT       += core gui sql
+
+
+>>>>>>> 73f0b5c745c3dc935014751346c24557030ca3cc
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

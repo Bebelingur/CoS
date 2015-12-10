@@ -14,11 +14,11 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
-#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -30,41 +30,53 @@ public:
     QTabWidget *tabWidget;
     QWidget *mainTab;
     QWidget *insertTab;
+    QWidget *viewTab;
+    QLabel *label;
+    QWidget *tab_4;
+    QWidget *tab;
     QMenuBar *menuBar;
-    QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(529, 383);
+        MainWindow->resize(621, 452);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 531, 361));
+        tabWidget->setGeometry(QRect(0, 0, 621, 421));
         mainTab = new QWidget();
         mainTab->setObjectName(QStringLiteral("mainTab"));
         tabWidget->addTab(mainTab, QString());
         insertTab = new QWidget();
         insertTab->setObjectName(QStringLiteral("insertTab"));
         tabWidget->addTab(insertTab, QString());
+        viewTab = new QWidget();
+        viewTab->setObjectName(QStringLiteral("viewTab"));
+        label = new QLabel(viewTab);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(90, 120, 47, 13));
+        tabWidget->addTab(viewTab, QString());
+        tab_4 = new QWidget();
+        tab_4->setObjectName(QStringLiteral("tab_4"));
+        tabWidget->addTab(tab_4, QString());
+        tab = new QWidget();
+        tab->setObjectName(QStringLiteral("tab"));
+        tabWidget->addTab(tab, QString());
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 529, 21));
+        menuBar->setGeometry(QRect(0, 0, 621, 21));
         MainWindow->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -75,6 +87,10 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "CoS", 0));
         tabWidget->setTabText(tabWidget->indexOf(mainTab), QApplication::translate("MainWindow", "Main", 0));
         tabWidget->setTabText(tabWidget->indexOf(insertTab), QApplication::translate("MainWindow", "Insert Info", 0));
+        label->setText(QApplication::translate("MainWindow", "ddgdg", 0));
+        tabWidget->setTabText(tabWidget->indexOf(viewTab), QApplication::translate("MainWindow", "View Info", 0));
+        tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("MainWindow", "Search Info", 0));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "eteht", 0));
     } // retranslateUi
 
 };
