@@ -31,8 +31,8 @@ public:
     //Remove functions
     vector<InfoType> findPerson(int ID);
     vector<CompType> findComputer(int ID);
-    void removePerson(int ID);
-    void removeComputer(int ID);
+    bool removePerson(int ID);
+    bool removeComputer(int ID);
 
     char convertToChar(string a);
     string convertToString(char a);

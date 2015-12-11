@@ -255,22 +255,24 @@ vector<CompType> data::findComputer(int ID)
     return c;
 }
 //removes person from database
-void data::removePerson(int ID)
+bool data::removePerson(int ID)
 {
     QSqlDatabase db = QSqlDatabase::database("first");
     QSqlQuery query(db);
     QSqlQuery query2(db);
-    query.exec("DELETE FROM persons WHERE id = "+QString::number(ID)+"");
+    bool success = query.exec("DELETE FROM persons WHERE id = "+QString::number(ID)+"");
     query2.exec("DELETE FROM relations WHERE idPerson = "+QString::number(ID)+"");
+    return success;
 }
 //removes computer from database
-void data::removeComputer(int ID)
+bool data::removeComputer(int ID)
 {
     QSqlDatabase db = QSqlDatabase::database("first");
     QSqlQuery query(db);
     QSqlQuery query2(db);
-    query.exec("DELETE FROM computers WHERE id = "+QString::number(ID)+"");
+    bool success = query.exec("DELETE FROM computers WHERE id = "+QString::number(ID)+"");
     query2.exec("DELETE FROM relations WHERE idComputer = "+QString::number(ID)+"");
+    return success;
 }
 //function that finds relations between person and computers
 vector<CompType> data::viewRelationPerson(int ID)

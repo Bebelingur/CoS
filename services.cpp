@@ -584,14 +584,15 @@ vector<CompType> Services::getComputer(int ID)
     vector<CompType> p = connection.findComputer(ID);
     return p;
 }
-void Services::getPersID(int ID)
+bool Services::getPersIDToRemove(int ID)
 {
-    connection.removePerson(ID);
+    return connection.removePerson(ID);
+
 }
 
-void Services::getCompID(int ID)
+bool Services::getCompIDToRemove(int ID)
 {
-    connection.removeComputer(ID);
+    return connection.removeComputer(ID);
 }
 
 
