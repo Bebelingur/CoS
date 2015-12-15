@@ -586,6 +586,10 @@ vector<CompType> Services::getComputer(int ID)
 bool Services::getPersIDToRemove(int ID)
 {
     return connection.removePerson(ID);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6a370e0001469950d2a05512abdb0f4550b50cc9
 }
 
 bool Services::getCompIDToRemove(int ID)
