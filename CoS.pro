@@ -8,7 +8,7 @@ QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = CoS
+TARGET = CoS5
 TEMPLATE = app
 
 
@@ -26,3 +26,4 @@ HEADERS  += mainwindow.h \
     services.h
 
 FORMS    += mainwindow.ui
+CONFIG += C++11

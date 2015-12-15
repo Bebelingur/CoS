@@ -493,20 +493,19 @@ vector<InfoType> Services::searchVectorBirthYear(string birthYearSearch)
 {
     vector <InfoType> FP = makePersonsVector();
     vector <InfoType> result;
-        //check if input is of correct length and check if it only contains numbers
-        if(birthYearSearch.size()== 4 && isdigit(birthYearSearch[0])&& isdigit(birthYearSearch[1])&& isdigit(birthYearSearch[2])&& isdigit(birthYearSearch[3]))
+    //check if input is of correct length and check if it only contains numbers
+    for(unsigned int i = 0; i < FP.size(); i++)
+    {
+        int temp = FP[i].birthYear;
+        string s = std::to_string(temp);
+        int found = s.find(birthYearSearch);
+        if(found != (int) string::npos)
         {
-            int birthYearSearchI = atoi(birthYearSearch.c_str());//set string to int to be able to compare
-            for(unsigned int i = 0; i < FP.size(); i++)
-            {
-                if(birthYearSearchI == FP[i].birthYear)
-                {
-                    result.push_back(FP[i]);
-                }
-            }
+            result.push_back(FP[i]);
         }
-        FP.clear();
-        return result;
+    }
+    FP.clear();
+    return result;
 }
 //function that searches for deathYear, set results from search to vector and returns the vector
 vector<InfoType> Services::searchVectorDeathYear(string deathYearSearch)
@@ -584,14 +583,14 @@ vector<CompType> Services::getComputer(int ID)
     vector<CompType> p = connection.findComputer(ID);
     return p;
 }
-void Services::getPersID(int ID)
+bool Services::getPersIDToRemove(int ID)
 {
-    connection.removePerson(ID);
+    return connection.removePerson(ID);
 }
 
-void Services::getCompID(int ID)
+bool Services::getCompIDToRemove(int ID)
 {
-    connection.removeComputer(ID);
+    return connection.removeComputer(ID);
 }
 
 

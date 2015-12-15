@@ -62,8 +62,8 @@ public:
     //REMOVE FUNCTIONS
     vector<InfoType> getPerson(int ID);
     vector<CompType> getComputer(int ID);
-    void getPersID(int ID);
-    void getCompID(int ID);
+    bool getPersIDToRemove(int ID);
+    bool getCompIDToRemove(int ID);
     //OTHER
     string changeName(string tempName);
     int findIDPerson(string persName, vector<string> &names);
