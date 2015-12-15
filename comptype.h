@@ -1,3 +1,4 @@
+//bla
 #ifndef COMPTYPE
 #define COMPTYPE
 #include <string>

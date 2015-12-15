@@ -1,3 +1,4 @@
+//bla
 #ifndef DATA
 #define DATA
 #include <fstream>

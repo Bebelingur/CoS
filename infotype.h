@@ -1,3 +1,4 @@
+//bla
 #ifndef INFOTYPE
 #define INFOTYPE
 #include <string>
