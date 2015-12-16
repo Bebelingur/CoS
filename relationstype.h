@@ -1,4 +1,3 @@
-//bla
 #ifndef RELATIONSTYPE
 #define RELATIONSTYPE
 #include <string>

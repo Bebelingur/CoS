@@ -6,50 +6,504 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>621</width>
-    <height>452</height>
+    <width>754</width>
+    <height>539</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>754</width>
+    <height>539</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>754</width>
+    <height>539</height>
+   </size>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>127</green>
+        <blue>127</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>170</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>127</green>
+        <blue>127</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>170</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>127</green>
+        <blue>127</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>127</green>
+        <blue>127</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>170</red>
+        <green>170</green>
+        <blue>170</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>127</green>
+        <blue>127</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>127</green>
+        <blue>127</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="font">
+   <font>
+    <weight>50</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
   </property>
   <property name="windowTitle">
    <string>CoS</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/icons/logomini.jpg</normaloff>:/icons/logomini.jpg</iconset>
+  </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <widget class="QTabWidget" name="tab_insertInfo">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>621</width>
-      <height>421</height>
+      <width>751</width>
+      <height>511</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Triangular</enum>
+    </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
     </property>
     <widget class="QWidget" name="mainTab">
+     <property name="font">
+      <font>
+       <stylestrategy>PreferDefault</stylestrategy>
+      </font>
+     </property>
+     <attribute name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/icons/icons/main.png</normaloff>:/icons/icons/main.png</iconset>
+     </attribute>
      <attribute name="title">
       <string>Main</string>
      </attribute>
      <widget class="QLabel" name="label_logoPic">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>40</x>
         <y>10</y>
-        <width>291</width>
+        <width>351</width>
         <height>191</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_infoPic">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>200</y>
-        <width>291</width>
-        <height>161</height>
        </rect>
       </property>
       <property name="text">
@@ -59,8 +513,8 @@
      <widget class="QTableWidget" name="tableWidget">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>0</y>
+        <x>430</x>
+        <y>50</y>
         <width>301</width>
         <height>371</height>
        </rect>
@@ -85,8 +539,87 @@
        </property>
       </column>
      </widget>
+     <widget class="QLabel" name="label_christmas">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>390</y>
+        <width>211</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Are you in a christmas mood?</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>411</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.1pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'helvetica,arial,sans-serif'; font-size:8pt; color:#373e4d; background-color:#fefefe;&quot;&gt;This is a computer program that allows the user to input famous persons and computers in computer science history and stores it in a database. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'helvetica,arial,sans-serif'; font-size:8pt; color:#373e4d;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'helvetica,arial,sans-serif'; font-size:8pt; color:#373e4d; background-color:#fefefe;&quot;&gt;The program allows the user to search the database along with sorting the information in hoth ascending and descending order.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'helvetica,arial,sans-serif'; font-size:8pt; color:#373e4d;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'helvetica,arial,sans-serif'; font-size:8pt; color:#373e4d; background-color:#fefefe;&quot;&gt;The program also gives the user the option to make a relation between a person and a computer. One person can be linked with multiple computers and one computer can be linked with multiple persons.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'helvetica,arial,sans-serif'; font-size:8pt; color:#373e4d;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'helvetica,arial,sans-serif'; font-size:8pt; color:#373e4d; background-color:#fefefe;&quot;&gt;The program also has remove and edit fuctions that gives the user the ability to remove and edit information in the database respectively.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>410</y>
+        <width>256</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPushButton" name="playChristmasMusicButton">
+         <property name="text">
+          <string>Yes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="playNonChristmasMusicButton">
+         <property name="text">
+          <string>No</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="stopMusicButton">
+         <property name="text">
+          <string>Stop</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="insertTab">
+     <attribute name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/icons/icons/add.png</normaloff>:/icons/icons/add.png</iconset>
+     </attribute>
      <attribute name="title">
       <string>Insert Info</string>
      </attribute>
@@ -95,158 +628,56 @@
        <rect>
         <x>10</x>
         <y>29</y>
-        <width>601</width>
-        <height>341</height>
+        <width>741</width>
+        <height>441</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="widget">
        <attribute name="title">
         <string>Person</string>
        </attribute>
-       <widget class="QPushButton" name="inputAddPerson">
-        <property name="geometry">
-         <rect>
-          <x>420</x>
-          <y>280</y>
-          <width>81</width>
-          <height>26</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Add person</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="inputPersonClear">
-        <property name="geometry">
-         <rect>
-          <x>510</x>
-          <y>280</y>
-          <width>81</width>
-          <height>26</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Clear</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_3">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>50</y>
-          <width>61</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Name:</string>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_4">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>90</y>
+          <x>480</x>
+          <y>70</y>
           <width>61</width>
           <height>31</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Gender:</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_5">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>130</y>
-          <width>91</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Year of birth:</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_deathYear">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>400</x>
-          <y>130</y>
-          <width>101</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Year of death:</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="text_inputPersonName">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>50</y>
-          <width>371</width>
-          <height>25</height>
-         </rect>
-        </property>
-        <property name="placeholderText">
-         <string>Input name</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="text_inputBirthYear">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>130</y>
-          <width>91</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="placeholderText">
-         <string>Min 1791</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="text_inputDeathYear">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>500</x>
-          <y>130</y>
-          <width>91</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="checkBox_inputDeath">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>130</y>
-          <width>201</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>This person is deceased</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_7">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
-          <width>581</width>
-          <height>17</height>
+          <y>20</y>
+          <width>471</width>
+          <height>21</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Input information about a person and push add person</string>
@@ -256,10 +687,15 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>170</y>
+          <y>230</y>
           <width>151</width>
           <height>17</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Add this information:</string>
@@ -269,9 +705,9 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>280</y>
-          <width>261</width>
-          <height>20</height>
+          <y>350</y>
+          <width>271</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="font">
@@ -288,9 +724,9 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>190</y>
-          <width>571</width>
-          <height>81</height>
+          <y>260</y>
+          <width>711</width>
+          <height>91</height>
          </rect>
         </property>
         <property name="sizePolicy">
@@ -357,15 +793,20 @@
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>80</x>
-          <y>90</y>
-          <width>229</width>
-          <height>25</height>
+          <x>550</x>
+          <y>70</y>
+          <width>121</width>
+          <height>131</height>
          </rect>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
          <item>
           <widget class="QRadioButton" name="radioB_inputGenderFemale">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Female</string>
            </property>
@@ -376,6 +817,11 @@
          </item>
          <item>
           <widget class="QRadioButton" name="radioB_inputGenderMale">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Male</string>
            </property>
@@ -386,6 +832,11 @@
          </item>
          <item>
           <widget class="QRadioButton" name="radioB_inputGenderUnknown">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Unknown</string>
            </property>
@@ -399,149 +850,215 @@
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>251</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Year of birth:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="text_inputBirthYear">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="placeholderText">
+            <string>Min 1791</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_inputDeath">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>180</y>
+          <width>186</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>This person is deceased</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>511</x>
+          <y>350</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QPushButton" name="inputAddPerson">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Add person</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="inputPersonClear">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Clear</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>60</y>
+          <width>431</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="text_inputPersonName">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="placeholderText">
+            <string>Input name</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>180</y>
+          <width>247</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_deathYear">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Year of death:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="text_inputDeathYear">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="widget_2">
        <attribute name="title">
         <string>Computer</string>
        </attribute>
-       <widget class="QPushButton" name="button_inputComputerClear">
-        <property name="geometry">
-         <rect>
-          <x>510</x>
-          <y>280</y>
-          <width>81</width>
-          <height>26</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Clear</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="button_inputAddComputer">
-        <property name="geometry">
-         <rect>
-          <x>390</x>
-          <y>280</y>
-          <width>111</width>
-          <height>26</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Add computer</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_8">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>50</y>
-          <width>59</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Name:</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_9">
-        <property name="geometry">
-         <rect>
-          <x>350</x>
-          <y>70</y>
-          <width>101</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Year designed:</string>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_10">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>70</y>
+          <x>480</x>
+          <y>40</y>
           <width>59</width>
           <height>17</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Type:</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_yearBuilt">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>350</x>
-          <y>160</y>
-          <width>81</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Year built:</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="text_inputComputerName">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>40</y>
-          <width>351</width>
-          <height>25</height>
-         </rect>
-        </property>
-        <property name="placeholderText">
-         <string>Input name</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="text_inputTypeNameOther">
-        <property name="geometry">
-         <rect>
-          <x>130</x>
-          <y>170</y>
-          <width>181</width>
-          <height>25</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="text_inputDesignYear">
-        <property name="geometry">
-         <rect>
-          <x>460</x>
-          <y>70</y>
-          <width>113</width>
-          <height>25</height>
-         </rect>
-        </property>
-        <property name="placeholderText">
-         <string>Min 1791</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="text_inputComputerYearBuilt">
         <property name="enabled">
          <bool>false</bool>
         </property>
         <property name="geometry">
          <rect>
-          <x>460</x>
-          <y>160</y>
-          <width>113</width>
-          <height>25</height>
+          <x>570</x>
+          <y>170</y>
+          <width>151</width>
+          <height>21</height>
          </rect>
         </property>
        </widget>
        <widget class="QCheckBox" name="check_inputBuilt">
         <property name="geometry">
          <rect>
-          <x>350</x>
-          <y>110</y>
+          <x>20</x>
+          <y>150</y>
           <width>221</width>
           <height>23</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>This computer has been built</string>
@@ -550,14 +1067,19 @@
        <widget class="QLabel" name="label_13">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>190</y>
+          <x>10</x>
+          <y>200</y>
           <width>141</width>
           <height>17</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>Add this inofrmation:</string>
+         <string>Add this information:</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_19">
@@ -565,9 +1087,14 @@
          <rect>
           <x>10</x>
           <y>10</y>
-          <width>421</width>
+          <width>511</width>
           <height>17</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Input information about a computer and push add computer</string>
@@ -576,15 +1103,20 @@
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>80</y>
-          <width>96</width>
-          <height>115</height>
+          <x>520</x>
+          <y>50</y>
+          <width>131</width>
+          <height>121</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
           <widget class="QRadioButton" name="radioB_inputTypeMechanical">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Mechanical</string>
            </property>
@@ -595,8 +1127,13 @@
          </item>
          <item>
           <widget class="QRadioButton" name="radioB_inputTypeElectrical">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>Electrical</string>
+            <string>Electronic</string>
            </property>
            <property name="autoExclusive">
             <bool>true</bool>
@@ -605,6 +1142,11 @@
          </item>
          <item>
           <widget class="QRadioButton" name="radioB_inputTypeTransistor">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Transistor</string>
            </property>
@@ -615,6 +1157,11 @@
          </item>
          <item>
           <widget class="QRadioButton" name="radioB_inputTypeOther">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Other:</string>
            </property>
@@ -628,10 +1175,10 @@
        <widget class="QTableWidget" name="list_inputComputerDisplay">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>210</y>
-          <width>561</width>
-          <height>61</height>
+          <x>10</x>
+          <y>220</y>
+          <width>711</width>
+          <height>121</height>
          </rect>
         </property>
         <property name="editTriggers">
@@ -673,10 +1220,10 @@
        <widget class="QLabel" name="label_inputErrorComputer">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>280</y>
-          <width>291</width>
-          <height>17</height>
+          <x>20</x>
+          <y>350</y>
+          <width>301</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="font">
@@ -689,84 +1236,159 @@
          <string/>
         </property>
        </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>499</x>
+          <y>350</y>
+          <width>221</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QPushButton" name="button_inputAddComputer">
+           <property name="text">
+            <string>Add computer</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_inputComputerClear">
+           <property name="text">
+            <string>Clear</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>150</y>
+          <width>217</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="label_yearBuilt">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Year built:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="text_inputComputerYearBuilt">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>100</y>
+          <width>249</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Year designed:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="text_inputDesignYear">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="placeholderText">
+            <string>Min 1791</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>441</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="text_inputComputerName">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="placeholderText">
+            <string>Input name</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="widget_3">
        <attribute name="title">
         <string>Relation</string>
        </attribute>
-       <widget class="QPushButton" name="button_inputRelationClear">
-        <property name="geometry">
-         <rect>
-          <x>510</x>
-          <y>280</y>
-          <width>81</width>
-          <height>26</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Clear</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="button_inputAddRelation">
-        <property name="geometry">
-         <rect>
-          <x>400</x>
-          <y>280</y>
-          <width>101</width>
-          <height>26</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Add relation</string>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_14">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>541</width>
+          <x>20</x>
+          <y>10</y>
+          <width>601</width>
           <height>17</height>
          </rect>
         </property>
         <property name="text">
          <string>Input name of a person and a computer and then push add button to make relation</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_relationPersonName">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>30</y>
-          <width>111</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Name of person:</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="text_inputRelationNamePerson">
-        <property name="geometry">
-         <rect>
-          <x>130</x>
-          <y>30</y>
-          <width>411</width>
-          <height>25</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="list_relationComputerName">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>150</y>
-          <width>131</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Name of computer:</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_17">
@@ -782,21 +1404,11 @@
          <string>Choose a person:</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="text_inputRelationNameComputer">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>150</y>
-          <width>401</width>
-          <height>25</height>
-         </rect>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_18">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>180</y>
+          <y>220</y>
           <width>131</width>
           <height>17</height>
          </rect>
@@ -810,8 +1422,8 @@
          <rect>
           <x>20</x>
           <y>80</y>
-          <width>551</width>
-          <height>61</height>
+          <width>691</width>
+          <height>91</height>
          </rect>
         </property>
         <property name="selectionMode">
@@ -848,9 +1460,9 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>200</y>
-          <width>561</width>
-          <height>71</height>
+          <y>240</y>
+          <width>701</width>
+          <height>101</height>
          </rect>
         </property>
         <property name="selectionMode">
@@ -890,9 +1502,9 @@
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>280</y>
-          <width>311</width>
-          <height>17</height>
+          <y>350</y>
+          <width>331</width>
+          <height>21</height>
          </rect>
         </property>
         <property name="font">
@@ -905,6 +1517,79 @@
          <string/>
         </property>
        </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>493</x>
+          <y>348</y>
+          <width>231</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QPushButton" name="button_inputAddRelation">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Add relation</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_inputRelationClear">
+           <property name="text">
+            <string>Clear</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>190</y>
+          <width>691</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <item>
+          <widget class="QLabel" name="list_relationComputerName">
+           <property name="text">
+            <string>Name of computer:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="text_inputRelationNameComputer"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>691</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QLabel" name="label_relationPersonName">
+           <property name="text">
+            <string>Name of person:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="text_inputRelationNamePerson"/>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </widget>
      <widget class="QLabel" name="label_2">
@@ -912,7 +1597,7 @@
        <rect>
         <x>10</x>
         <y>1</y>
-        <width>271</width>
+        <width>541</width>
         <height>31</height>
        </rect>
       </property>
@@ -921,101 +1606,28 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="viewTab">
-     <attribute name="title">
-      <string>View Info</string>
-     </attribute>
-     <widget class="QScrollArea" name="scrollArea">
-      <property name="geometry">
-       <rect>
-        <x>260</x>
-        <y>10</y>
-        <width>341</width>
-        <height>371</height>
-       </rect>
-      </property>
-      <property name="widgetResizable">
-       <bool>true</bool>
-      </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>339</width>
-         <height>369</height>
-        </rect>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QRadioButton" name="radioButton">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>30</y>
-        <width>91</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Persons</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>10</y>
-        <width>191</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>View </string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_2">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>60</y>
-        <width>82</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Computers</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_3">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>80</y>
-        <width>82</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>RadioButton</string>
-      </property>
-     </widget>
-    </widget>
     <widget class="QWidget" name="tab_4">
+     <attribute name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/icons/icons/search.png</normaloff>:/icons/icons/search.png</iconset>
+     </attribute>
      <attribute name="title">
-      <string>Search Info</string>
+      <string>Search and View</string>
      </attribute>
      <widget class="QTabWidget" name="tabWidget_3">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>611</width>
-        <height>361</height>
+        <width>751</width>
+        <height>471</height>
        </rect>
       </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
@@ -1024,11 +1636,16 @@
        <widget class="QLineEdit" name="text_searchPerson">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
+          <x>20</x>
+          <y>40</y>
           <width>581</width>
           <height>31</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
         </property>
         <property name="placeholderText">
          <string>Insert search here ...</string>
@@ -1038,10 +1655,15 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>90</y>
           <width>81</width>
           <height>17</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Search for:</string>
@@ -1050,10 +1672,10 @@
        <widget class="QTableWidget" name="table_searchPerson">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>50</y>
-          <width>451</width>
-          <height>261</height>
+          <x>180</x>
+          <y>90</y>
+          <width>551</width>
+          <height>311</height>
          </rect>
         </property>
         <property name="editTriggers">
@@ -1069,7 +1691,7 @@
          <bool>true</bool>
         </attribute>
         <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>100</number>
+         <number>125</number>
         </attribute>
         <attribute name="horizontalHeaderStretchLastSection">
          <bool>true</bool>
@@ -1101,15 +1723,20 @@
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>70</y>
-          <width>101</width>
+          <x>30</x>
+          <y>120</y>
+          <width>113</width>
           <height>141</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
           <widget class="QRadioButton" name="radioB_searchPersonName">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Name</string>
            </property>
@@ -1120,6 +1747,11 @@
          </item>
          <item>
           <widget class="QRadioButton" name="radioB_searchPersoBirthYear">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Birth year</string>
            </property>
@@ -1127,6 +1759,11 @@
          </item>
          <item>
           <widget class="QRadioButton" name="radioB_searchPersonDeathYear">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Death year</string>
            </property>
@@ -1134,8 +1771,13 @@
          </item>
          <item>
           <widget class="QRadioButton" name="radioB_searchPersonGender">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>Gender</string>
+            <string>Gender:</string>
            </property>
           </widget>
          </item>
@@ -1144,10 +1786,10 @@
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>220</y>
-          <width>91</width>
-          <height>85</height>
+          <x>60</x>
+          <y>270</y>
+          <width>100</width>
+          <height>88</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -1155,6 +1797,11 @@
           <widget class="QRadioButton" name="radioB_searchGenderFemale">
            <property name="enabled">
             <bool>false</bool>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
            </property>
            <property name="text">
             <string>Female</string>
@@ -1166,6 +1813,11 @@
            <property name="enabled">
             <bool>false</bool>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Male</string>
            </property>
@@ -1176,12 +1828,35 @@
            <property name="enabled">
             <bool>false</bool>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Unknown</string>
            </property>
           </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QLabel" name="label_22">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>511</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Search for persons by inputing search parameters</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_6">
@@ -1191,11 +1866,16 @@
        <widget class="QLineEdit" name="text_searchComputer">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>581</width>
-          <height>31</height>
+          <x>20</x>
+          <y>40</y>
+          <width>721</width>
+          <height>41</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
         </property>
         <property name="placeholderText">
          <string>Insert search here ...</string>
@@ -1205,10 +1885,15 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
+          <y>100</y>
           <width>91</width>
           <height>17</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Search for:</string>
@@ -1217,10 +1902,10 @@
        <widget class="QTableWidget" name="table_searchComputer">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>50</y>
-          <width>451</width>
-          <height>261</height>
+          <x>160</x>
+          <y>90</y>
+          <width>581</width>
+          <height>311</height>
          </rect>
         </property>
         <property name="editTriggers">
@@ -1236,7 +1921,7 @@
          <bool>true</bool>
         </attribute>
         <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>100</number>
+         <number>125</number>
         </attribute>
         <attribute name="horizontalHeaderStretchLastSection">
          <bool>true</bool>
@@ -1265,15 +1950,20 @@
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>70</y>
-          <width>116</width>
-          <height>115</height>
+          <x>20</x>
+          <y>120</y>
+          <width>138</width>
+          <height>119</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
           <widget class="QRadioButton" name="radioB_searchComputerName">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Name</string>
            </property>
@@ -1284,6 +1974,11 @@
          </item>
          <item>
           <widget class="QRadioButton" name="radioB_searchComputerType">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Type</string>
            </property>
@@ -1291,6 +1986,11 @@
          </item>
          <item>
           <widget class="QRadioButton" name="radioB_searchComputerYearDesign">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Year designed</string>
            </property>
@@ -1298,6 +1998,11 @@
          </item>
          <item>
           <widget class="QRadioButton" name="radioB_searchComputerYearBuilt">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Year built</string>
            </property>
@@ -1305,10 +2010,218 @@
          </item>
         </layout>
        </widget>
+       <widget class="QLabel" name="label_21">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>541</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Search for computers by inputing search parameters</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>Relation</string>
+       </attribute>
+       <widget class="QTableWidget" name="table_searchNameDisplay">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>10</y>
+          <width>371</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QTableWidget" name="table_searchRelationComputerDisplay">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>190</y>
+          <width>721</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Type</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Year designed</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Year built</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="button_searchRelation">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>140</y>
+          <width>251</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Search relation</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="text_searchRelation">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>331</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="placeholderText">
+         <string>Insert search here...</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="table_searchRelationPersonDisplay">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>190</y>
+          <width>721</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Gender</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Birth year</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Death year</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>81</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Search by:</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>40</y>
+          <width>201</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QRadioButton" name="radioB_searchRelationPerson">
+           <property name="text">
+            <string>Person</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioB_searchRelationComputer">
+           <property name="text">
+            <string>Computer</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_errorRelationSearch">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>300</y>
+          <width>441</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="tab">
+     <attribute name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/icons/icons/remove.png</normaloff>:/icons/icons/remove.png</iconset>
+     </attribute>
      <attribute name="title">
       <string>Remove Info</string>
      </attribute>
@@ -1317,12 +2230,15 @@
        <rect>
         <x>10</x>
         <y>0</y>
-        <width>601</width>
-        <height>361</height>
+        <width>751</width>
+        <height>471</height>
        </rect>
       </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
@@ -1334,10 +2250,10 @@
         </property>
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>280</y>
-          <width>281</width>
-          <height>31</height>
+          <x>210</x>
+          <y>370</y>
+          <width>311</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="font">
@@ -1354,9 +2270,9 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>70</y>
-          <width>571</width>
-          <height>201</height>
+          <y>90</y>
+          <width>711</width>
+          <height>271</height>
          </rect>
         </property>
         <property name="editTriggers">
@@ -1399,13 +2315,31 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>20</y>
-          <width>561</width>
+          <y>50</y>
+          <width>701</width>
           <height>31</height>
          </rect>
         </property>
         <property name="placeholderText">
          <string>Insert name here...</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_24">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>691</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Find computer by name and to remove that computer select that computers row and push button</string>
         </property>
        </widget>
       </widget>
@@ -1417,8 +2351,8 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
-          <width>571</width>
+          <y>50</y>
+          <width>711</width>
           <height>31</height>
          </rect>
         </property>
@@ -1432,10 +2366,10 @@
         </property>
         <property name="geometry">
          <rect>
-          <x>170</x>
-          <y>280</y>
-          <width>231</width>
-          <height>31</height>
+          <x>230</x>
+          <y>370</y>
+          <width>291</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="font">
@@ -1452,9 +2386,9 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>60</y>
-          <width>571</width>
-          <height>211</height>
+          <y>90</y>
+          <width>711</width>
+          <height>261</height>
          </rect>
         </property>
         <property name="editTriggers">
@@ -1490,6 +2424,260 @@
          </property>
         </column>
        </widget>
+       <widget class="QLabel" name="label_23">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>691</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Find computer by name and to remove that computer select that computers row and push button</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_8">
+     <attribute name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/icons/icons/edid.png</normaloff>:/icons/icons/edid.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Edit</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>751</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_9">
+       <attribute name="title">
+        <string>Person</string>
+       </attribute>
+       <widget class="QTableWidget" name="personTableWidgetToEdit">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>100</y>
+          <width>711</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Gender</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Birth year</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Death year</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QLineEdit" name="editLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>711</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="placeholderText">
+         <string>Insert name here...</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="editPushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>370</y>
+          <width>311</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Edit selected person</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_25">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>651</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Find person by name and select that computers row and push button to edit</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_10">
+       <attribute name="title">
+        <string>Computer</string>
+       </attribute>
+       <widget class="QTableWidget" name="computerTableWidgetToEdit">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>90</y>
+          <width>711</width>
+          <height>271</height>
+         </rect>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Type</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Year designed</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Year built</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="compEditPushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>370</y>
+          <width>311</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Edit selected computer</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editLineEditComp">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>701</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="placeholderText">
+         <string>Insert name here...</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>651</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Find computer by name and select that computers row and push button to edit</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>
@@ -1500,7 +2688,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>621</width>
+     <width>754</width>
      <height>25</height>
     </rect>
    </property>
@@ -1508,6 +2696,8 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

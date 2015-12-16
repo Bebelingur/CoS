@@ -1,5 +1,6 @@
-//bla
 #include "services.h"
+#include "editdialog.h"
+#include "editcompdialog.h"
 
 using namespace std;
 
@@ -570,6 +571,87 @@ vector<CompType> Services::searchVectorComputersName(string name)
         Comp.clear();
         return result;
 }
+vector<CompType> Services::searchVectorComputersYearMade(string yearMadeSearch)
+{
+    vector <CompType> C = makeComputerVector();
+    vector <CompType> result;
+
+            for(unsigned int i = 0; i < C.size(); i++)
+            {
+                int temp = C[i].yearMade;
+                std::string s = std::to_string(temp);
+                int found = s.find(yearMadeSearch);//check if input is part of name
+
+                if(found != (int) string::npos)
+                {
+                    result.push_back(C[i]);
+                }
+
+            }
+        C.clear();
+        return result;
+}
+vector<CompType> Services::searchVectorComputersType(string typeSearch)
+{
+    vector<CompType> Comp = makeComputerVector();
+    vector<CompType> result;
+
+        for(unsigned int i = 0; i < typeSearch.size() ; i++)
+        {
+            //set input to lowercase
+            typeSearch[i] = tolower(typeSearch[i]);
+        }
+        for(unsigned int i = 0; i < Comp.size(); i++)
+        {
+           string tempType = Comp[i].type;
+
+           for(unsigned int j = 0; j < tempType.size() ; j++)
+           {
+               //set string to int to be able to compare
+               tempType[j] = tolower(tempType[j]);
+           }
+           //check if input is apart of name
+           int found = tempType.find(typeSearch);
+           if(found != (int) std::string::npos)
+           {
+               result.push_back(Comp[i]);
+           }
+        }
+        Comp.clear();
+        return result;
+}
+vector<CompType> Services::searchVectorComputersWasBuilt(string wasBuiltSearch)
+{
+    vector <CompType> C = makeComputerVector();
+    vector <CompType> result;
+      if((wasBuiltSearch.size() == 1) && isdigit(wasBuiltSearch[0]) && (wasBuiltSearch == "0"))
+    {
+        int wasBuiltSearchI = atoi(wasBuiltSearch.c_str());//set string to int to be able to compare
+        for(unsigned int i = 0; i < C.size(); i++)
+        {
+            if(wasBuiltSearchI == C[i].wasBuilt)
+            {
+                result.push_back(C[i]);
+            }
+        }
+    }
+    else if(!((wasBuiltSearch.size() == 1) && isdigit(wasBuiltSearch[0]) && (wasBuiltSearch == "0")))
+    {
+        for(unsigned int i = 0; i < C.size(); i++)
+        {
+            int temp = C[i].wasBuilt;
+            std::string s = std::to_string(temp);
+            int found = s.find(wasBuiltSearch);//check if input is part of name
+
+            if(found != (int) string::npos)
+            {
+                result.push_back(C[i]);
+            }
+        }
+    }
+    FP.clear();
+    return result;
+}
 //REMOVE
 //function that gets the person id and returns it
 vector<InfoType> Services::getPerson(int ID)
@@ -587,17 +669,12 @@ vector<CompType> Services::getComputer(int ID)
 bool Services::getPersIDToRemove(int ID)
 {
     return connection.removePerson(ID);
-<<<<<<< HEAD
-=======
-
->>>>>>> 6a370e0001469950d2a05512abdb0f4550b50cc9
 }
 
 bool Services::getCompIDToRemove(int ID)
 {
     return connection.removeComputer(ID);
 }
-
 
 //OTHER
 //changes name uppercase/lowercase
@@ -621,4 +698,32 @@ string Services::changeName(string tempName)
         }
     }
     return tempName;
+}
+
+bool Services::editPerson(string name, char gender, int bYear, int dYear, int id)
+{
+    InfoType p;
+    p.name = name;
+    p.gender = gender;
+    p.birthYear = bYear;
+    p.deathYear = dYear;
+    p.id = id;
+
+    data personsToData;
+    bool success = personsToData.editDataPerson(p);
+    return success;
+}
+
+bool Services::editComputer(string computerName, int computerYearMade, string type, int yBuilt, int id)
+{
+    CompType c;
+    c.compName = computerName;
+    c.yearMade = computerYearMade;
+    c.type = type;
+    c.wasBuilt = yBuilt;
+    c.id = id;
+
+    data computerToData;
+    bool success = computerToData.editDataComputer(c);
+    return success;
 }

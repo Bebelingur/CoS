@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>../icons/add.png</file>
+        <file>../icons/edid.png</file>
+        <file>../icons/main.png</file>
+        <file>../icons/remove.png</file>
+        <file>../icons/search.png</file>
+        <file>../logo.jpg</file>
+        <file>../logomini.jpg</file>
+    </qresource>
+</RCC>

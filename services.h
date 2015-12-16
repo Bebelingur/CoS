@@ -1,4 +1,3 @@
-//bla
 #ifndef SERVICES_H
 #define SERVICES_H
 #include <cstdlib>
@@ -10,6 +9,7 @@
 #include "infotype.h"
 #include "comptype.h"
 #include "relationstype.h"
+
 
 using namespace std;
 
@@ -60,6 +60,9 @@ public:
     vector<InfoType> searchVectorDeathYear(string deathYearSearch);
     //SEARCH COMPUTERS FUNCTIONS
     vector<CompType> searchVectorComputersName(string name);
+    vector<CompType> searchVectorComputersYearMade(string yearMadeSearch);
+    vector<CompType> searchVectorComputersType(string typeSearch);
+    vector<CompType> searchVectorComputersWasBuilt(string wasBuiltSearch);
     //REMOVE FUNCTIONS
     vector<InfoType> getPerson(int ID);
     vector<CompType> getComputer(int ID);
@@ -69,6 +72,10 @@ public:
     string changeName(string tempName);
     int findIDPerson(string persName, vector<string> &names);
     int findIDComputer(string compName, vector<string> &names);
+    //EDIT
+    bool editPerson(string name, char gender, int bYear, int dYear, int id);
+    bool editComputer(string computerName, int computerYearMade, string type, int yBuilt, int id);
+
 private:
     vector <InfoType> FP;
     vector <CompType> Comp;

@@ -28,21 +28,25 @@ public:
     void saveDataRelations(RelationsType p);
     void saveDataPersons(InfoType p);
     void saveDataComputers(CompType p);
-
     //Remove functions
     vector<InfoType> findPerson(int ID);
     vector<CompType> findComputer(int ID);
     bool removePerson(int ID);
     bool removeComputer(int ID);
-
+    //EDIT
+    bool editDataPerson(InfoType P);
+    bool editDataComputer(CompType C);
+    //RELATION
+    vector<CompType> viewRelationPerson(int ID);
+    vector<InfoType> viewRelationComputer(int ID);
+    //OTHER
     char convertToChar(string a);
     string convertToString(char a);
     bool getMakeRelation(int compID, int persID);
     int getFindIDPerson(string persName, vector<string> &names);
     int getFindIDComputer(string compName, vector<string>&names);
 
-    vector<CompType> viewRelationPerson(int ID);
-    vector<InfoType> viewRelationComputer(int ID);
+
 
 private:
     string personFilename, computerFilename;

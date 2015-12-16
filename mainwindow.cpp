@@ -1,4 +1,3 @@
-//bla
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
@@ -7,6 +6,8 @@
 #include <vector>
 #include <QMessageBox>
 #include <QMainWindow>
+#include "editdialog.h"
+#include "editcompdialog.h"
 
 using namespace std;
 
@@ -30,10 +31,15 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QPixmap pix("C:/Users/BerglindÓsk/Desktop/logo");
+    QPixmap pix("../logo");
     ui->label_logoPic->setPixmap(pix);
-    QPixmap pix2("C:/Users/BerglindÓsk/Desktop/info");
-    ui->label_infoPic->setPixmap(pix2);
+    //QPixmap pix2("C:/Users/BerglindÓsk/Desktop/info");
+    //ui->label_infoPic->setPixmap(pix2);
+
+    player = new QMediaPlayer; // þetta fall er tengt music
+    ui->label_christmas->setText("<span style='color: #ff0000'>Are you in a christmas mood?</span>");
+
+    ui->tab_insertInfo->setCurrentIndex(0);
 
     viewStatistics();
     displayAllPersons();
@@ -41,6 +47,8 @@ MainWindow::MainWindow(QWidget *parent) :
     displayAllComputersRemove();
     displayAllPersonsSearch();
     displayAllComputerSearch();
+    displayAllPersonsEdit();
+    displayAllComputersEdit();
 
     //prepare the person display table
     ui->list_inputPersonDisplay->horizontalHeader()->setVisible(true);
@@ -65,12 +73,36 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->list_computerRelationDisplay->clearContents();
     ui->list_computerRelationDisplay->setRowCount(1);
     ui->list_computerRelationDisplay->setColumnCount(4);
+
+    //search relation table function
+    ui->table_searchRelationComputerDisplay->show();
+    ui->table_searchRelationPersonDisplay->hide();
 }
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 //MAIN MENU
+void MainWindow::on_playChristmasMusicButton_clicked() // þetta fall er tengt music
+{
+    //file path needs to be changed for music to play music, copy new filepath in between the double quotes
+    player->setMedia(QUrl::fromLocalFile("../CoS/It's Beginning to look a lot like Christmas Lyrics.mp3"));
+    player->setVolume(100);
+    player->play();
+}
+
+void MainWindow::on_playNonChristmasMusicButton_clicked() // þetta fall er tengt music
+{
+    //file path needs to be changed for music to play music, copy new filepath in between the double quotes
+    player->setMedia(QUrl::fromLocalFile("../CoS/The Grinch Song.mp3"));
+    player->setVolume(100);
+    player->play();
+}
+
+void MainWindow::on_stopMusicButton_clicked() // þetta fall er tengt music
+{
+    player->pause();
+}
 void MainWindow::viewStatistics()
 {
     vector<InfoType> FP = sConnect.makePersonsVector();
@@ -210,7 +242,7 @@ void MainWindow::on_inputAddPerson_clicked()
         personDeathYear = 0;
     }
     bool checkDeathYear = false;
-    if(personDeathYear == 0 || (personDeathYear >= startCS && personDeathYear <= yearNow))
+    if(personDeathYear == 0 || (personDeathYear >= startCS && personDeathYear <= yearNow && personDeathYear > personBirthYear))
     {
         checkDeathYear = true;
     }
@@ -229,6 +261,10 @@ void MainWindow::on_inputAddPerson_clicked()
         //Error, cannot add person
         ui->label_inputError->setText("<span style='color: #ff0000'>Could not add person. Invalid input</span>");
     }
+    displayAllPersons();
+    displayAllPersonsRemove();
+    displayAllPersonsSearch();
+    displayAllPersonsEdit();
 }
 string MainWindow::letterCheck(string name)
 {
@@ -416,7 +452,7 @@ void MainWindow::on_button_inputAddComputer_clicked()
     }
     else if(ui->radioB_inputTypeElectrical->isChecked())
     {
-        computerType = "Electrical";
+        computerType = "Electronic";
         checkType = true;
     }
     else if(ui->radioB_inputTypeTransistor->isChecked())
@@ -465,6 +501,9 @@ void MainWindow::on_button_inputAddComputer_clicked()
         //Error, cannot add computer
         ui->label_inputErrorComputer->setText("<span style='color: #ff0000'>Could not add computer. Invalid input</span>");
     }
+    displayAllComputersRemove();
+    displayAllComputerSearch();
+    displayAllComputersEdit();
 }
 
 void MainWindow::on_text_inputComputerName_textChanged(const QString &computerName)
@@ -508,16 +547,19 @@ void MainWindow::on_text_inputComputerYearBuilt_textChanged(const QString &wasBu
 void MainWindow::on_radioB_inputTypeMechanical_clicked()
 {
     ui->list_inputComputerDisplay->setItem(0,1,new QTableWidgetItem("Mechanical"));
+    ui->text_inputTypeNameOther->setEnabled(false);
 }
 
 void MainWindow::on_radioB_inputTypeElectrical_clicked()
 {
-    ui->list_inputComputerDisplay->setItem(0,1,new QTableWidgetItem("Electrical"));
+    ui->list_inputComputerDisplay->setItem(0,1,new QTableWidgetItem("Electronic"));
+    ui->text_inputTypeNameOther->setEnabled(false);
 }
 
 void MainWindow::on_radioB_inputTypeTransistor_clicked()
 {
     ui->list_inputComputerDisplay->setItem(0,1,new QTableWidgetItem("Transistor"));
+    ui->text_inputTypeNameOther->setEnabled(false);
 }
 void MainWindow::on_text_inputTypeNameOther_textChanged(const QString &computerTypeOther)
 {
@@ -570,6 +612,8 @@ void MainWindow::on_check_inputBuilt_toggled(bool checked)
 
 void MainWindow::on_button_inputAddRelation_clicked()
 {
+    //if(ui->table_searchNameDisplay->currentIndex().isValid())
+
     //checks if database is empty or not
     vector<InfoType> FP = sConnect.makePersonsVector();
     vector<CompType> C = sConnect.makeComputerVector();
@@ -578,103 +622,59 @@ void MainWindow::on_button_inputAddRelation_clicked()
     FP.clear();
     C.clear();
 
-    int currentlySelectedPersonIndex = ui->list_personRelationDisplay->currentIndex().row();
-    InfoType p = currentlyDisplaydPerson.at(currentlySelectedPersonIndex);
-    //p id á manneskju í database
-
-    int currentlySelectedComputerIndex = ui->list_computerRelationDisplay->currentIndex().row();
-    CompType c = currentlyDisplaydComputers.at(currentlySelectedComputerIndex);
-    //c id á tölvu í database
-
-    int compID = 0, persID = 0;
-    string compName = "", persName = "";
-    vector <string> names;
     if(checkDatabase == true)
     {
         //PERSON NAME
         string personNameText = ui->text_inputRelationNamePerson->text().toStdString();
         QString pName = QString::fromStdString(personNameText);
-        //on_text_inputRelationNamePerson_textChanged(pName);
-
-        persID = s.findIDPerson(personNameText, names);
-        if(persID == 0)
-        {
-            if(names.size() == 0)
-            {
-                ui->label_inputErrorRelation->setText("<span style='color: #ff0000'>Person not found in database.</span>");
-            }
-            else
-            {
-                for(unsigned int i = 0; i < names.size(); i++)
-                {
-                    string nameP = names[i];
-                    QString namePers = QString::fromStdString(nameP);
-                    ui->list_personRelationDisplay->setItem(0,i,new QTableWidgetItem(namePers));
-                }
-            }
-        }
-        names.clear();
+        //get person row id to get ID from database
+        int currentlySelectedPersonIndex = ui->list_personRelationDisplay->currentIndex().row();
+        InfoType p = currentlyDisplaydPerson.at(currentlySelectedPersonIndex);
+        int persID = p.id;
 
         //COMPUTER NAME
         string computerNameText = ui->text_inputRelationNameComputer->text().toStdString();
         QString cName = QString::fromStdString(computerNameText);
-        //on_text_inputRelationNameComputer_textChanged(cName);
-
-        compID = s.findIDComputer(compName, names);
-        if(compID == 0)
+        //get computer row id to get ID from database
+        int currentlySelectedComputerIndex = ui->list_computerRelationDisplay->currentIndex().row();
+        CompType c = currentlyDisplaydComputers.at(currentlySelectedComputerIndex);
+        int compID = c.id;
+        if(!(sConnect.makeRelation(compID, persID)))
         {
-            if(names.size() == 0)
-            {
-                ui->label_inputErrorRelation->setText("<span style='color: #ff0000'>Computer not found in database.</span>");
-            }
-            else
-            {
-                for(unsigned int i = 0; i < names.size(); i++)
-                {
-                    string nameC = names[i];
-                    QString nameComp = QString::fromStdString(nameC);
-                    ui->list_computerRelationDisplay->setItem(0,i,new QTableWidgetItem(nameComp));
-                }
-            }
-        }
-        names.clear();
-
-        //IF SUCCESS THEN THIS MESSAGE
-        bool check = false;
-        if(persID != 0 && compID != 0)
-        {
-            check = s.makeRelation(compID, persID);
             ui->label_inputErrorRelation->setText("<span style='color: #006600'>Relation successfully added!</span>");
-        }
-        if(check == true)
-        {
-            ui->label_inputErrorRelation->setText("<span style='color: #ff0000'>Relation is already in database.</span>");
         }
         else
         {
-            ui->label_inputErrorRelation->setText("<span style='color: #ff0000'>Could not add relation. Invalid input</span>");
+            ui->label_inputErrorRelation->setText("<span style='color: #ff0000'>Relation is already in database.</span>");
+
         }
     }
 }
+void MainWindow::on_list_personRelationDisplay_clicked()
+{
+    if((ui->list_personRelationDisplay->currentIndex().isValid())&&(ui->list_computerRelationDisplay->currentIndex().isValid()))
+    {
+        ui->button_inputAddRelation->setEnabled(true);
+    }
+}
 
+void MainWindow::on_list_computerRelationDisplay_clicked()
+{
+    if((ui->list_personRelationDisplay->currentIndex().isValid())&&(ui->list_computerRelationDisplay->currentIndex().isValid()))
+    {
+        ui->button_inputAddRelation->setEnabled(true);
+    }
+}
 void MainWindow::on_button_inputRelationClear_clicked()
 {
     ui->text_inputRelationNamePerson->clear();
     ui->text_inputRelationNameComputer->clear();
     ui->list_personRelationDisplay->clearContents();
     ui->list_computerRelationDisplay->clearContents();
+    ui->button_inputAddRelation->setEnabled(false);
+    ui->label_inputErrorRelation->clear();
 }
 
-/*void MainWindow::on_text_inputRelationNamePerson_textChanged(const QString &personName)
-{
-    ui->list_personRelationDisplay->setItem(0,0,new QTableWidgetItem(personName));
-}
-
-void MainWindow::on_text_inputRelationNameComputer_textChanged(const QString &computerName)
-{
-    ui->list_computerRelationDisplay->setItem(0,0,new QTableWidgetItem(computerName));
-}
-*/
 bool MainWindow::checkDatabaseEmpty(vector<InfoType> FP, vector<CompType> C)
 {
     if((FP.size() == 0) && (C.size() == 0))
@@ -821,6 +821,7 @@ void MainWindow::on_removeLineEdit_textEdited()
 {
     string userInput = ui->removeLineEdit->text().toStdString();
     vector<InfoType> p = sConnect.searchVectorName(userInput);
+    ui->removePushButton->setEnabled(false);
     displayPersonsRemove(p);
 }
 
@@ -882,12 +883,12 @@ void MainWindow::displayComputersRemove(vector<CompType> c)
         ui->computerTableWidget->setItem(i, 0, new QTableWidgetItem(name));
         if(x.yearMade == 0)
         {
-            ui->computerTableWidget->setItem(i, 1, new QTableWidgetItem(notAvailable));
+            ui->computerTableWidget->setItem(i, 2, new QTableWidgetItem(notAvailable));
         }else
         {
-            ui->computerTableWidget->setItem(i, 1, new QTableWidgetItem(yearMade));
+            ui->computerTableWidget->setItem(i, 2, new QTableWidgetItem(yearMade));
         }
-        ui->computerTableWidget->setItem(i, 2, new QTableWidgetItem(type));
+        ui->computerTableWidget->setItem(i, 1, new QTableWidgetItem(type));
         if(x.wasBuilt == 0)
         {
             ui->computerTableWidget->setItem(i, 3, new QTableWidgetItem(notBuilt));
@@ -904,6 +905,7 @@ void MainWindow::on_compRemoveLineEdit_textEdited()
 {
     string userInput = ui->compRemoveLineEdit->text().toStdString();
     vector<CompType> c = sConnect.searchVectorComputersName(userInput);
+    ui->compRemovePushButton->setEnabled(false);
     displayComputersRemove(c);
 }
 
@@ -986,7 +988,6 @@ void MainWindow::lineSearchForSearch()
 {
     vector<InfoType> FP;
     string userInput = ui->text_searchPerson->text().toStdString();
-    //string userInputt = "";
 
     if(ui->radioB_searchPersonName->isChecked())
     {
@@ -994,34 +995,8 @@ void MainWindow::lineSearchForSearch()
     }
     if(ui->radioB_searchPersonGender->isChecked())
     {
-         if(ui->radioB_searchGenderFemale->isChecked())
-        {
-           ui->text_searchPerson->setText("f");
-        }
-        else if(ui->radioB_searchGenderMale->isChecked())
-        {
-             ui->text_searchPerson->setText("m");
-        }
-        else if(ui->radioB_inputGenderUnknown->isChecked())
-        {
-             ui->text_searchPerson->setText("?");
-        }
-        FP = sConnect.searchVectorGender(userInput);
+
     }
-    /*if(!(ui->radioB_searchPersonGender->isChecked()));
-    {
-        ui->radioB_searchGenderFemale->setAutoExclusive(false);
-        ui->radioB_searchGenderFemale->setChecked(false);
-        ui->radioB_searchGenderFemale->setAutoExclusive(true);
-
-        ui->radioB_searchGenderMale->setAutoExclusive(false);
-        ui->radioB_searchGenderMale->setChecked(false);
-        ui->radioB_searchGenderMale->setAutoExclusive(true);
-
-        ui->radioB_searchGenderUnknown->setAutoExclusive(false);
-        ui->radioB_searchGenderUnknown->setChecked(false);
-        ui->radioB_searchGenderUnknown->setAutoExclusive(true);
-    }*/
     if(ui->radioB_searchPersoBirthYear->isChecked())
     {
         FP = sConnect.searchVectorBirthYear(userInput);
@@ -1080,7 +1055,7 @@ void MainWindow::displayComputerSearch(vector<CompType> C)
     currentlyDisplaydComputers = C;
 }
 
-void MainWindow::lineSearchForSearchComputer()
+void MainWindow::on_text_searchComputer_textEdited()
 {
     vector<CompType> C;
     string userInput = ui->text_searchComputer->text().toStdString();
@@ -1088,22 +1063,461 @@ void MainWindow::lineSearchForSearchComputer()
     {
         C = sConnect.searchVectorComputersName(userInput);
     }
-    /*if(ui->radioB_searchComputerType->isChecked())
+    if(ui->radioB_searchComputerType->isChecked())
     {
-        C = sConnect.searchVectorComputerType(userInput);
+        C = sConnect.searchVectorComputersType(userInput);
     }
     if(ui->radioB_searchComputerYearDesign->isChecked())
     {
-        C = sConnect.searchVectorComputerDesign(userInput);
+        C = sConnect.searchVectorComputersYearMade(userInput);
     }
     if(ui->radioB_searchComputerYearBuilt->isChecked())
     {
-        C = sConnect.searchVectorComputerBuilt(userInput);
-    }*/
+        C = sConnect.searchVectorComputersWasBuilt(userInput);
+    }
         displayComputerSearch(C);
 }
-
-void MainWindow::on_text_searchComputer_textEdited()
+//SEARCH RELATION
+void MainWindow::on_button_searchRelation_clicked()
 {
-    lineSearchForSearchComputer();
+    if(ui->table_searchNameDisplay->currentIndex().isValid())
+    {
+        ui->label_errorRelationSearch->clear();
+        //persons name input should display computers related
+        if(ui->radioB_searchRelationComputer->isChecked())
+        {
+            vector<InfoType> FP;
+            int currentlySelectedPersonIndex = ui->table_searchNameDisplay->currentIndex().row();
+            CompType c = currentlyDisplaydComputers.at(currentlySelectedPersonIndex);
+            int compID = c.id;
+            FP = sConnect.getViewRelationComputer(compID);
+            displayPersonsRelationsSearch(FP);
+        }
+        //computer name input should display persons related
+        if(ui->radioB_searchRelationPerson->isChecked())
+        {
+            ui->label_errorRelationSearch->clear();
+            vector<CompType> C;
+            int currentlySelectedPersonIndex = ui->table_searchNameDisplay->currentIndex().row();
+            InfoType p = currentlyDisplaydPerson.at(currentlySelectedPersonIndex);
+            int persID = p.id;
+            C = sConnect.getViewRelationPerson(persID);
+            displayComputersRelationsSearch(C);
+        }
+    }
+    else
+    {
+        ui->label_errorRelationSearch->setText("<span style='color: #ff0000'>Invalid input. Please select name from list and press button.</span>");
+    }
+}
+
+void MainWindow::displayComputersRelationsSearch(vector<CompType> C)
+{
+    ui->table_searchRelationComputerDisplay->clearContents();
+    ui->table_searchRelationComputerDisplay->setRowCount(C.size());
+    for(unsigned int i = 0; i < C.size(); i++)
+    {
+        CompType c = C.at(i);
+        QString qname = QString::fromStdString(c.compName);
+        QString qyearMade = QString::number(c.yearMade);
+        QString qtype = QString::fromStdString(c.type);
+        QString qwasBuilt = QString::number(c.wasBuilt);
+        ui->table_searchRelationComputerDisplay->setItem(i, 0, new QTableWidgetItem(qname));
+        ui->table_searchRelationComputerDisplay->setItem(i, 1, new QTableWidgetItem(qtype));
+        ui->table_searchRelationComputerDisplay->setItem(i, 2, new QTableWidgetItem(qyearMade));
+        ui->table_searchRelationComputerDisplay->setItem(i, 3, new QTableWidgetItem(qwasBuilt));
+    }
+}
+
+void MainWindow::displayPersonsRelationsSearch(vector<InfoType> FP)
+{
+    ui->table_searchRelationPersonDisplay->clearContents();
+    ui->table_searchRelationPersonDisplay->setRowCount(FP.size());
+    for(unsigned int i = 0; i < FP.size(); i++)
+    {
+        InfoType p = FP.at(i);
+        QString name = QString::fromStdString(p.name);
+
+        string gend = "";
+        p.gender = tolower(p.gender);
+        if(p.gender == 'm')
+        {
+            gend = "Male";
+        }else if(p.gender == 'f')
+        {
+            gend = "Female";
+        }else
+        {
+            gend = "Other";
+        }
+
+        QString gender = QString::fromStdString(gend);
+        QString bYear = QString::number(p.birthYear);
+        QString dYear = QString::number(p.deathYear);
+        ui->table_searchRelationPersonDisplay->setItem(i, 0, new QTableWidgetItem(name));
+        ui->table_searchRelationPersonDisplay->setItem(i, 1, new QTableWidgetItem(gender));
+        ui->table_searchRelationPersonDisplay->setItem(i, 2, new QTableWidgetItem(bYear));
+        ui->table_searchRelationPersonDisplay->setItem(i, 3, new QTableWidgetItem(dYear));
+    }
+}
+
+void MainWindow::on_radioB_searchRelationComputer_clicked()
+{
+    ui->table_searchRelationPersonDisplay->show();
+    ui->table_searchRelationComputerDisplay->hide();
+}
+
+void MainWindow::on_radioB_searchRelationPerson_clicked()
+{
+    ui->table_searchRelationComputerDisplay->show();
+    ui->table_searchRelationPersonDisplay->hide();
+}
+
+void MainWindow::on_text_searchRelation_textEdited()
+{
+    ui->label_errorRelationSearch->clear();
+
+    if(ui->radioB_searchRelationComputer->isChecked())
+    {
+        vector<CompType> C;
+        string userInput = ui->text_searchRelation->text().toStdString();
+
+        C = sConnect.searchVectorComputersName(userInput);
+        ui->table_searchNameDisplay->clearContents();
+        ui->table_searchNameDisplay->setRowCount(C.size());
+        for(unsigned int i = 0; i < C.size(); i++)
+        {
+            CompType comp = C.at(i);
+            QString name = QString::fromStdString(comp.compName);
+            ui->table_searchNameDisplay->setItem(i,0,new QTableWidgetItem(name));
+        }
+        currentlyDisplaydComputers = C;
+    }
+    if(ui->radioB_searchRelationPerson->isChecked())
+    {
+        vector<InfoType> FP;
+        string userInput = ui->text_searchRelation->text().toStdString();
+
+        FP = sConnect.searchVectorName(userInput);
+        ui->table_searchNameDisplay->clearContents();
+        ui->table_searchNameDisplay->setRowCount(FP.size());
+        for(unsigned int i = 0; i < FP.size(); i++)
+        {
+            InfoType pers = FP.at(i);
+            QString name = QString::fromStdString(pers.name);
+            ui->table_searchNameDisplay->setItem(i,0,new QTableWidgetItem(name));
+        }
+        currentlyDisplaydPerson = FP;
+    }
+}
+//EDIT
+
+
+void MainWindow::on_editLineEdit_textEdited()
+{
+    string userInput = ui->editLineEdit->text().toStdString();
+    vector<InfoType> p = sConnect.searchVectorName(userInput);
+    ui->editPushButton->setEnabled(false);
+    displayPersonsEdit(p);
+}
+
+
+void MainWindow::displayPersonsEdit(vector<InfoType> FP)
+{
+    ui->personTableWidgetToEdit->clearContents();
+    ui->personTableWidgetToEdit->setRowCount(FP.size());
+
+    for(unsigned int i = 0; i < FP.size(); i++)
+    {
+        InfoType p = FP.at(i);
+        string gend = "";
+        p.gender = tolower(p.gender);
+        if(p.gender == 'm')
+        {
+            gend = "Male";
+        }else if(p.gender == 'f')
+        {
+            gend = "Female";
+        }else
+        {
+            gend = "Other";
+        }
+
+        QString name = QString::fromStdString(p.name);
+        QString gender = QString::fromStdString(gend);
+        QString yearBorn = QString::number(p.birthYear);
+        QString yearDead = QString::number(p.deathYear);
+        ui->personTableWidgetToEdit->setItem(i, 0, new QTableWidgetItem(name));
+        ui->personTableWidgetToEdit->setItem(i, 1, new QTableWidgetItem(gender));
+        ui->personTableWidgetToEdit->setItem(i, 2, new QTableWidgetItem(yearBorn));
+        if(p.deathYear == 0)
+        {
+            ui->personTableWidgetToEdit->setItem(i, 3, new QTableWidgetItem(notDead));
+        }else
+        {
+            ui->personTableWidgetToEdit->setItem(i, 3, new QTableWidgetItem(yearDead));
+        }
+    }
+    currentlyDisplaydPerson = FP;
+}
+
+void MainWindow::displayAllPersonsEdit()
+{
+    vector <InfoType> p = sConnect.makePersonsVector();
+    displayPersonsEdit(p);
+}
+
+void MainWindow::on_editPushButton_clicked()
+{
+    editDialog e;
+
+    int currentlySelectedIndex = ui->personTableWidgetToEdit->currentIndex().row();
+
+    InfoType p = currentlyDisplaydPerson.at(currentlySelectedIndex);
+
+    string nameValue = p.name;
+
+    e.setName(nameValue);
+
+    e.setGender(p.gender);
+
+    e.setBirthYear(p.birthYear);
+
+    e.setDeathYear(p.deathYear);
+
+    e.setID(p.id);
+
+    int returnValue = e.exec();
+
+    if(returnValue == 1)
+    {
+        int id = e.getID();
+        string name = e.getName();
+        char gender = e.getGender();
+        int birthYear = e.getBirthYear();
+        int deathYear = e.getDeathYear();
+        bool success = sConnect.editPerson(name, gender, birthYear, deathYear, id);
+
+        if(success)
+        {
+            ui->statusBar->showMessage("Information was edited", 1500);
+            ui->editLineEdit->setText("");
+            displayAllPersonsEdit();
+
+            ui->editPushButton->setEnabled(false);
+        }else
+        {
+            ui->statusBar->showMessage("Could not edit information", 1500);
+        }
+
+    }else if(returnValue == 2)
+    {
+        ui->editLineEdit->setText("");
+        displayAllPersonsEdit();
+        ui->editPushButton->setEnabled(false);
+    }
+
+}
+
+void MainWindow::on_personTableWidgetToEdit_clicked()
+{
+    ui->editPushButton->setEnabled(true);
+}
+
+//COMP
+
+void MainWindow::on_editLineEditComp_textEdited()
+{
+    string userInput = ui->editLineEditComp->text().toStdString();
+    vector<CompType> c = sConnect.searchVectorComputersName(userInput);
+    ui->compEditPushButton->setEnabled(false);
+    displayComputersEdit(c);
+}
+
+
+void MainWindow::displayComputersEdit(vector<CompType> c)
+{
+    ui->computerTableWidgetToEdit->clearContents();
+    ui->computerTableWidgetToEdit->setRowCount(c.size());
+
+    for(unsigned int i = 0; i < c.size(); i++)
+    {
+        CompType x = c.at(i);
+        QString name = QString::fromStdString(x.compName);
+        QString yearMade = QString::number(x.yearMade);
+        QString type = QString::fromStdString(x.type);
+        QString wasBuilt = QString::number(x.wasBuilt);
+
+        ui->computerTableWidgetToEdit->setItem(i, 0, new QTableWidgetItem(name));
+        if(x.yearMade == 0)
+        {
+            ui->computerTableWidgetToEdit->setItem(i, 2, new QTableWidgetItem(notAvailable));
+        }else
+        {
+            ui->computerTableWidgetToEdit->setItem(i, 2, new QTableWidgetItem(yearMade));
+        }
+        ui->computerTableWidgetToEdit->setItem(i, 1, new QTableWidgetItem(type));
+        if(x.wasBuilt == 0)
+        {
+            ui->computerTableWidgetToEdit->setItem(i, 3, new QTableWidgetItem(notBuilt));
+        }else
+        {
+            ui->computerTableWidgetToEdit->setItem(i, 3, new QTableWidgetItem(wasBuilt));
+        }
+    }
+    currentlyDisplaydComputers = c;
+}
+
+void MainWindow::displayAllComputersEdit()
+{
+    vector <CompType> c = sConnect.makeComputerVector();
+    displayComputersEdit(c);
+}
+
+void MainWindow::on_compEditPushButton_clicked()
+{
+    editCompDialog e;
+
+    int currentlySelectedIndex = ui->computerTableWidgetToEdit->currentIndex().row();
+
+    CompType c = currentlyDisplaydComputers.at(currentlySelectedIndex);
+
+
+    e.setCompName(c.compName);
+
+    e.setYearMade(c.yearMade);
+
+    e.setWasBuilt(c.wasBuilt);
+
+    e.setID(c.id);
+
+    e.setType(c.type);
+
+
+    int returnValue = e.exec();
+
+    if(returnValue == 1)
+    {
+        int id = e.getID();
+        string compName = e.getCompName();
+        int yearMade = e.getYearMade();
+        string type = e.getType();
+        int wasBuilt = e.getWasBuilt();
+
+        bool success = sConnect.editComputer(compName, yearMade, type, wasBuilt, id);
+
+        if(success)
+        {
+            ui->statusBar->showMessage("Information was edited", 1500);
+            ui->editLineEditComp->setText("");
+            displayAllComputersEdit();
+
+            ui->compEditPushButton->setEnabled(false);
+        }else
+        {
+            ui->statusBar->showMessage("Could not edit information", 1500);
+        }
+
+    }else if(returnValue == 2)
+    {
+        ui->editLineEditComp->setText("");
+        displayAllComputersEdit();
+        ui->compEditPushButton->setEnabled(false);
+    }
+
+}
+
+void MainWindow::on_computerTableWidgetToEdit_clicked()
+{
+    ui->compEditPushButton->setEnabled(true);
+}
+
+void MainWindow::on_radioB_inputTypeOther_clicked()
+{
+    ui->text_inputTypeNameOther->setEnabled(true);
+}
+
+void MainWindow::on_radioB_searchPersonName_clicked()
+{
+    ui->radioB_searchGenderFemale->setAutoExclusive(false);
+    ui->radioB_searchGenderFemale->setChecked(false);
+    ui->radioB_searchGenderFemale->setAutoExclusive(true);
+
+    ui->radioB_searchGenderMale->setAutoExclusive(false);
+    ui->radioB_searchGenderMale->setChecked(false);
+    ui->radioB_searchGenderMale->setAutoExclusive(true);
+
+    ui->radioB_searchGenderUnknown->setAutoExclusive(false);
+    ui->radioB_searchGenderUnknown->setChecked(false);
+    ui->radioB_searchGenderUnknown->setAutoExclusive(true);
+}
+
+void MainWindow::on_radioB_searchPersoBirthYear_clicked()
+{
+    ui->radioB_searchGenderFemale->setAutoExclusive(false);
+    ui->radioB_searchGenderFemale->setChecked(false);
+    ui->radioB_searchGenderFemale->setAutoExclusive(true);
+
+    ui->radioB_searchGenderMale->setAutoExclusive(false);
+    ui->radioB_searchGenderMale->setChecked(false);
+    ui->radioB_searchGenderMale->setAutoExclusive(true);
+
+    ui->radioB_searchGenderUnknown->setAutoExclusive(false);
+    ui->radioB_searchGenderUnknown->setChecked(false);
+    ui->radioB_searchGenderUnknown->setAutoExclusive(true);
+}
+
+void MainWindow::on_radioB_searchPersonDeathYear_clicked()
+{
+    ui->radioB_searchGenderFemale->setAutoExclusive(false);
+    ui->radioB_searchGenderFemale->setChecked(false);
+    ui->radioB_searchGenderFemale->setAutoExclusive(true);
+
+    ui->radioB_searchGenderMale->setAutoExclusive(false);
+    ui->radioB_searchGenderMale->setChecked(false);
+    ui->radioB_searchGenderMale->setAutoExclusive(true);
+
+    ui->radioB_searchGenderUnknown->setAutoExclusive(false);
+    ui->radioB_searchGenderUnknown->setChecked(false);
+    ui->radioB_searchGenderUnknown->setAutoExclusive(true);
+}
+
+void MainWindow::on_radioB_searchGenderFemale_clicked()
+{
+    vector<InfoType> FP;
+
+        string genderSearch = "";
+
+           genderSearch = "f";
+
+        FP = sConnect.searchVectorGender(genderSearch);
+
+        displayPersonsSearch(FP);
+}
+
+void MainWindow::on_radioB_searchGenderMale_clicked()
+{
+    vector<InfoType> FP;
+
+        string genderSearch = "";
+
+
+             genderSearch = "m";
+
+        FP = sConnect.searchVectorGender(genderSearch);
+
+        displayPersonsSearch(FP);
+}
+
+void MainWindow::on_radioB_searchGenderUnknown_clicked()
+{
+    vector<InfoType> FP;
+
+        string genderSearch = "";
+
+             genderSearch = "?";
+
+        FP = sConnect.searchVectorGender(genderSearch);
+
+        displayPersonsSearch(FP);
 }

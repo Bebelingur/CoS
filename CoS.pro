@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql
+QT       += core gui sql multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,15 +15,24 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     data.cpp \
-    services.cpp
+    services.cpp \
+    editdialog.cpp \
+    editcompdialog.cpp
 
 HEADERS  += mainwindow.h \
     comptype.h \
     data.h \
     infotype.h \
-    relations.h \
     relationstype.h \
-    services.h
+    services.h \
+    editdialog.h \
+    editcompdialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    editdialog.ui \
+    editcompdialog.ui
+
 CONFIG += C++11
+
+RESOURCES += \
+    resources.qrc
